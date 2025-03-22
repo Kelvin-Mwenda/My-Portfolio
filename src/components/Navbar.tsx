@@ -50,7 +50,7 @@ const Navbar = () => {
             alt="Kelvin Mwenda" 
             className="h-10 w-10 rounded-full object-cover border-2 border-white shadow-lg"
             onError={(e) => {
-              e.currentTarget.src = "./public/logo2.jpg";
+              e.currentTarget.src = "https://shorturl.at/mYfLo";
               console.log("Logo image failed to load, using placeholder");
             }}
           />
