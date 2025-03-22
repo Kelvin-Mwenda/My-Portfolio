@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 212 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 212 100% 47%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 212 100% 47%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.875rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+  
+  ::selection {
+    @apply bg-[#8B4513]/20 text-foreground;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/10 shadow-sm dark:bg-[#111]/20 dark:border-white/5;
+  }
+  
+  .dark-glass {
+    @apply bg-[#0d0d0d]/80 backdrop-blur-xl border border-white/5 shadow-md;
+  }
+  
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .fade-mask-b {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+  
+  .fade-mask-t {
+    mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  }
+}
+
+/* Navbar transition */
+.navbar-scrolled {
+  @apply bg-[#0d0d0d]/80 backdrop-blur-lg border-b border-white/5 shadow-sm;
+  transition: all 0.3s ease;
+}
+
+.navbar-top {
+  @apply bg-transparent backdrop-blur-none border-b border-transparent;
+  transition: all 0.3s ease;
+}
+
+/* Smooth section transitions */
+section {
+  @apply opacity-0 transition-opacity duration-500;
+}
+
+section.visible {
+  @apply opacity-100;
+}
+
+/* Button hover effects */
+.btn-hover-effect {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-hover-effect:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.4s ease;
+}
+
+.btn-hover-effect:hover:after {
+  left: 100%;
+}
+
+/* Social Media Icons */
+.social-icon-btn {
+  @apply flex items-center justify-center h-12 w-12 rounded-full bg-[#111]/50 border border-[#8B4513]/20 text-white/80 hover:text-[#8B4513] transition-all duration-300 hover:border-[#8B4513]/50 hover:scale-110;
+  box-shadow: 0 0 0px rgba(139, 69, 19, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon-btn:hover {
+  box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
+}
+
+/* Starry background animations */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Glitch text effect */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.glowing-text {
+  text-shadow: 0 0 10px rgba(139, 69, 19, 0.5), 0 0 20px rgba(139, 69, 19, 0.3), 0 0 30px rgba(139, 69, 19, 0.1);
+}
+
+.glitch-wrapper {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    opacity: 1;
+    transform: translate3d(2px, 0, 0);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  }
+  10% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 45%, 0 45%);
+  }
+  20% {
+    clip-path: polygon(0 30%, 100% 30%, 100% 55%, 0 55%);
+  }
+  30% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 65%, 0 65%);
+  }
+  40% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 75%, 0 75%);
+  }
+  50% {
+    clip-path: polygon(0 55%, 100% 55%, 100% 85%, 0 85%);
+  }
+  60% {
+    clip-path: polygon(0 65%, 100% 65%, 100% 85%, 0 85%);
+  }
+  70% {
+    clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+  }
+  80% {
+    clip-path: polygon(0 85%, 100% 85%, 100% 95%, 0 95%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    opacity: 1;
+    transform: translate3d(-2px, 0, 0);
+    clip-path: polygon(0 15%, 100% 15%, 100% 35%, 0 35%);
+  }
+  15% {
+    clip-path: polygon(0 25%, 100% 25%, 100% 50%, 0 50%);
+  }
+  30% {
+    clip-path: polygon(0 35%, 100% 35%, 100% 65%, 0 65%);
+  }
+  45% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 75%, 0 75%);
+  }
+  60% {
+    clip-path: polygon(0 55%, 100% 55%, 100% 85%, 0 85%);
+  }
+  75% {
+    clip-path: polygon(0 65%, 100% 65%, 100% 90%, 0 90%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.glitch-text {
+  animation: glitch-skew 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse;
+}
+
+.glitch-text::before {
+  color: #8B4513;
+  animation: glitch-anim-1 5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  color: #a05b2c;
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+  20% {
+    transform: skew(0.5deg);
+  }
+  40% {
+    transform: skew(0deg);
+  }
+  60% {
+    transform: skew(-0.5deg);
+  }
+  80% {
+    transform: skew(0.25deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+/* Add glow animation for accent elements */
+@keyframes soft-glow {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
+  }
+}
+
+.soft-glow {
+  animation: soft-glow 3s ease-in-out infinite;
+}
+
+/* Project card hover effects */
+.project-card img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+.project-card .overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Skills section animations */
+.skill-badge {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(139, 69, 19, 0.2);
+}
+
+/* Contact form focus states */
+.contact-input:focus {
+  border-color: #8B4513;
+  box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+}
+
+.contact-input.error {
+  border-color: #ef4444;
+}
+
+.contact-input.error:focus {
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Add skill progress bar animations */
+.skill-progress.animate-in {
+  width: attr(data-width);
+  animation: progress-animate 1.5s ease-out forwards;
+}
+
+@keyframes progress-animate {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--width);
+  }
+}
+
+.skill-progress {
+  --width: 0%;
+}
+
+.skill-progress.animate-in {
+  --width: attr(data-width);
+  animation: progress-animate 1.5s ease-out forwards;
+}
+
+/* Fix animation to use JavaScript technique instead of CSS var */
+.skill-progress.animate-in {
+  animation: none !important;
+  transition: width 1.5s ease-out;
+}
