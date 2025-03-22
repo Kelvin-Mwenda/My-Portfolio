@@ -72,7 +72,7 @@ const About = () => {
                 ${imageHovered ? 'grayscale-0 scale-105' : 'grayscale'}">
                 {/* Replace with your profile image */}
                 <img 
-                  src="./public/Kelvin.jpg" 
+                  src="/Kelvin.jpg" 
                   alt="Profile Image" 
                   className="w-full h-full object-cover"
                 />
