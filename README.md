@@ -38,4 +38,4 @@ If you’d like to explore my portfolio locally, follow these steps:
 
 1. **Clone the repository:**  
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
+   git clone https://github.com/Kelvin-Mwenda/My-Portfolio
