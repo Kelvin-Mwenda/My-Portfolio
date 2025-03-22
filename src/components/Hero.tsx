@@ -174,7 +174,7 @@ const Hero = () => {
             <div className="absolute inset-0 glass rounded-3xl overflow-hidden shadow-xl">
               <div className="w-full flex items-center justify-center">
                 <img 
-                  src="./public/Kelvin.jpg" // Replace with actual image path
+                  src="/Kelvin.jpg" // Replace with actual image path
                   alt="Profile"
                   className="w-32 h-32 rounded-full object-cover shadow-lg"
                 />
