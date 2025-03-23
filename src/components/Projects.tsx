@@ -33,45 +33,57 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Dashboard",
-      description: "A modern dashboard for tracking sales, inventory, and customer data with real-time analytics.",
+      title: "Dairy Farming Management",
+      description: "Dairy Harbor is a web-based system for managing dairy farms, tracking milk production, cow health, feeding, and finances.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
-      image: "bg-gradient-to-br from-[#8B4513]/10 to-[#8B4513]/20"
+      image: "/dairy1.jpg",
+      liveDemo: "https://dairyharbor.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/Dairy-Harbor-static-website"
     },
     {
       id: 2,
       title: "Travel Booking Platform",
       description: "A comprehensive travel booking service with flight, hotel, and experience reservation capabilities.",
       tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-      image: "bg-gradient-to-br from-[#8B4513]/15 to-[#8B4513]/25" 
+      image: "/travel.jpg",
+      liveDemo: "https://social-media.example.com",
+      github: "https://github.com/yourusername/social-media-app" 
     },
     {
       id: 3,
       title: "Social Media App",
       description: "A feature-rich social platform for connecting users with similar interests and sharing content.",
       tags: ["React Native", "Firebase", "Redux", "GraphQL"],
-      image: "bg-gradient-to-br from-[#8B4513]/20 to-[#8B4513]/30"
+      image: "/social.jpg",
+      liveDemo: "https://social-media.example.com",
+      github: "https://github.com/yourusername/social-media-app"
     },
     {
       id: 4,
       title: "AI Content Generator",
       description: "An AI-powered tool for generating marketing copy, blog posts, and social media content.",
       tags: ["Python", "TensorFlow", "Flask", "React"],
-      image: "bg-gradient-to-br from-[#8B4513]/25 to-[#8B4513]/35"
+      image: "/ai.jpg",
+      liveDemo: "https://social-media.example.com",
+      github: "https://github.com/yourusername/social-media-app"
     },
     {
       id: 5,
       title: "Finance Tracker",
       description: "A personal finance application for budget management, expense tracking, and financial goal setting.",
       tags: ["Vue.js", "Express", "PostgreSQL", "D3.js"],
-      image: "bg-gradient-to-br from-[#8B4513]/30 to-[#8B4513]/40"
+      image: "/finance.jpg",
+      liveDemo: "https://social-media.example.com",
+      github: "https://github.com/yourusername/social-media-app"
     },
     {
       id: 6,
       title: "Health & Fitness App",
       description: "A comprehensive wellness platform for workout tracking, meal planning, and health monitoring.",
       tags: ["React", "Node.js", "MongoDB", "Socket.io"],
-      image: "bg-gradient-to-br from-[#8B4513]/35 to-[#8B4513]/45"
+      image: "/health.jpg",
+      liveDemo: "https://social-media.example.com",
+      github: "https://github.com/yourusername/social-media-app"
     }
   ];
 
@@ -101,10 +113,13 @@ const Projects = () => {
               className="group relative overflow-hidden rounded-2xl border border-border/50 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
             >
               <div className="aspect-video w-full overflow-hidden">
-                <div className={`w-full h-full ${project.image} flex items-center justify-center group-hover:scale-110 transition-all duration-500`}>
-                  <span className="text-xl font-medium text-[#8B4513]/50 group-hover:opacity-0 transition-opacity duration-300">Project Image</span>
-                </div>
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                />
               </div>
+
               
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -124,14 +139,18 @@ const Projects = () => {
                   
                   <div className="mt-6 flex items-center gap-3">
                     <a 
-                      href="#" 
+                      href={project.liveDemo} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 rounded-full bg-[#8B4513] px-4 py-2 text-sm font-medium text-white hover:bg-[#8B4513]/90 transition-colors"
                     >
                       <span>Live Demo</span>
                       <ExternalLink className="h-3.5 w-3.5" />
                     </a>
                     <a 
-                      href="#" 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
                       className="inline-flex items-center gap-1.5 rounded-full bg-white/10 hover:bg-white/20 px-4 py-2 text-sm font-medium text-white transition-colors"
                     >
                       <Github className="h-3.5 w-3.5" />
