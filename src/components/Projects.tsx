@@ -41,16 +41,16 @@ const Projects = () => {
       github: "https://github.com/Kelvin-Mwenda/Dairy-Harbor-static-website"
     },
     {
-      id: 1,
+      id: 2,
       title: "Agapez Friends Group",
       description: "Agapez Friends Group is a dynamic community of passionate individuals dedicated to creativity, collaboration, and innovation.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
       image: "/Agapez.jpg",
       liveDemo: "https://agapez.netlify.app/",
-      github: "https://github.com/Kelvin-Mwenda/Agape.git"
+      github: "https://github.com/Kelvin-Mwenda/Agape"
     },
     {
-      id: 2,
+      id: 3,
       title: "Travel Booking Platform",
       description: "A comprehensive travel booking service with flight, hotel, and experience reservation capabilities.",
       tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
@@ -59,7 +59,7 @@ const Projects = () => {
       github: "https://github.com/yourusername/social-media-app" 
     },
     {
-      id: 3,
+      id: 4,
       title: "Social Media App",
       description: "A feature-rich social platform for connecting users with similar interests and sharing content.",
       tags: ["React Native", "Firebase", "Redux", "GraphQL"],
@@ -68,7 +68,7 @@ const Projects = () => {
       github: "https://github.com/yourusername/social-media-app"
     },
     {
-      id: 4,
+      id: 5,
       title: "AI Content Generator",
       description: "An AI-powered tool for generating marketing copy, blog posts, and social media content.",
       tags: ["Python", "TensorFlow", "Flask", "React"],
@@ -77,7 +77,7 @@ const Projects = () => {
       github: "https://github.com/yourusername/social-media-app"
     },
     {
-      id: 5,
+      id: 6,
       title: "Finance Tracker",
       description: "A personal finance application for budget management, expense tracking, and financial goal setting.",
       tags: ["Vue.js", "Express", "PostgreSQL", "D3.js"],
@@ -86,7 +86,7 @@ const Projects = () => {
       github: "https://github.com/yourusername/social-media-app"
     },
     {
-      id: 6,
+      id: 7,
       title: "Health & Fitness App",
       description: "A comprehensive wellness platform for workout tracking, meal planning, and health monitoring.",
       tags: ["React", "Node.js", "MongoDB", "Socket.io"],
