@@ -35,10 +35,19 @@ const Projects = () => {
       id: 1,
       title: "Dairy Farming Management",
       description: "Dairy Harbor is a web-based system for managing dairy farms, tracking milk production, cow health, feeding, and finances.",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
+      tags: ["HTML", "bootstrap CSS", "Chart.js", "Flutter", "Firebase"],
       image: "/dairy1.jpg",
       liveDemo: "https://dairyharbor.netlify.app/",
       github: "https://github.com/Kelvin-Mwenda/Dairy-Harbor-static-website"
+    },
+    {
+      id: 1,
+      title: "Agapez Friends Group",
+      description: "Agapez Friends Group is a dynamic community of passionate individuals dedicated to creativity, collaboration, and innovation.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
+      image: "/Agapez.jpg",
+      liveDemo: "https://agapez.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/Agape.git"
     },
     {
       id: 2,
