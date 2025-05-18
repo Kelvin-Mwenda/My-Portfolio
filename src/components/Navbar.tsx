@@ -1,36 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { useLocation } from "react-router-dom";
 
-const sections = [
-  { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
+const navLinks = [
+  { name: "Home", href: "#home", id: "home" },
+  { name: "About", href: "#about", id: "about" },
+  { name: "Services", href: "#services", id: "services" },
+  { name: "Projects", href: "#projects", id: "projects" },
+  { name: "Contact", href: "#contact", id: "contact" },
 ];
 
 const Navbar: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>("about");
+  const [activeSection, setActiveSection] = useState<string>("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const currentHash = location.hash || "#home";
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      // Change navbar background on scroll
+      setIsScrolled(window.scrollY > 10);
 
-      let current = "about";
-      for (const section of sections) {
-        const el = document.getElementById(section.id);
+      // Scrollspy logic
+      let current = "home";
+      for (const link of navLinks) {
+        const el = document.getElementById(link.id);
         if (el) {
           const rect = el.getBoundingClientRect();
           if (rect.top <= 80 && rect.bottom > 80) {
-            current = section.id;
+            current = link.id;
             break;
           }
         }
@@ -43,14 +40,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
-
   return (
     <nav
       className={cn(
@@ -61,6 +50,7 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Logo */}
         <a
           href="#home"
           className="text-lg font-medium tracking-tighter flex items-center gap-2"
@@ -85,13 +75,13 @@ const Navbar: React.FC = () => {
               href={link.href}
               className={cn(
                 "text-sm font-medium tracking-wide transition-all duration-300 px-3 py-2 rounded-md relative",
-                currentHash === link.href
+                activeSection === link.id
                   ? "text-[#8B4513] shadow-[0_0_10px_rgba(139,69,19,0.3)]"
                   : "text-white/80 hover:text-white hover:bg-white/5"
               )}
             >
               {link.name}
-              {currentHash === link.href && (
+              {activeSection === link.id && (
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#8B4513] rounded-full shadow-[0_0_5px_#8B4513]"></span>
               )}
             </a>
@@ -122,7 +112,7 @@ const Navbar: React.FC = () => {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium px-4 py-3 rounded-md transition-all duration-300",
-                  currentHash === link.href
+                  activeSection === link.id
                     ? "text-[#8B4513] bg-white/5 shadow-[0_0_10px_rgba(139,69,19,0.2)]"
                     : "text-white/80 hover:text-white hover:bg-white/5"
                 )}
