@@ -33,66 +33,75 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Dairy Farming Management",
-      description: "Dairy Harbor is a web-based system for managing dairy farms, tracking milk production, cow health, feeding, and finances.",
-      tags: ["HTML", "bootstrap CSS", "Chart.js", "Flutter", "Firebase"],
-      image: "/dairy1.jpg",
+      title: "ChocsEli AI Consultant",
+      description: "Chocseli delivers innovative technological services, offering AI-driven tools, e-commerce integrations, and scalable cloud solutions through a sleek, user-focused platform.",
+      tags: ["React.js", "Tailwind CSS", 'React Router'],
+      image: "/chocs-eli.avif",
+      liveDemo: "https://chocseli.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/Chocseli-Tech"
+    },
+    {
+      id: 2,
+      title: "Dairy Harbor",
+      description: "A sleek, responsive website for a dairy farming Digital solutions company to showcase their dairy farming services.",
+      tags: ["React.js", "Tailwind CSS", "Chart.js", "Flutter", "Firebase", 'React Router'],
+      image: "/dairy-harbor.avif",
       liveDemo: "https://dairyharbor.netlify.app/",
       github: "https://github.com/Kelvin-Mwenda/Dairy-Harbor-static-website"
     },
     {
-      id: 2,
-      title: "Agapez Friends Group",
-      description: "Agapez Friends Group is a dynamic community of passionate individuals dedicated to creativity, collaboration, and innovation.",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
-      image: "/Agapez.jpg",
-      liveDemo: "https://agapez.netlify.app/",
-      github: "https://github.com/Kelvin-Mwenda/Agape"
-    },
-    {
       id: 3,
-      title: "Travel Booking Platform",
-      description: "A comprehensive travel booking service with flight, hotel, and experience reservation capabilities.",
-      tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-      image: "/travel.jpg",
-      liveDemo: "https://social-media.example.com",
-      github: "https://github.com/yourusername/social-media-app" 
+      title: "Chocoballs Website",
+      description: "A sleek, responsive site for a cakes shop making wedding, birthday and custom made cakes all around Kenya.",
+      tags: ["React", "TypeScript", "Tailwind CSS", 'React Router'],
+      image: "/choco.avif",
+      liveDemo: "https://agapez.netlify.app/",
+      github: "hhttps://github.com/Kelvin-Mwenda/choco-balls"
     },
     {
       id: 4,
-      title: "Social Media App",
-      description: "A feature-rich social platform for connecting users with similar interests and sharing content.",
-      tags: ["React Native", "Firebase", "Redux", "GraphQL"],
-      image: "/social.jpg",
-      liveDemo: "https://social-media.example.com",
-      github: "https://github.com/yourusername/social-media-app"
+      title: "Mikehize Cakes",
+      description: "A sleek, responsive site for a cakes shop making wedding, birthday and custom made cakes around Juja, Kiambu and Nairobi.",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      image: "/mikhize.avif",
+      liveDemo: "https://mikehizecakes.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/Agape"
     },
     {
       id: 5,
-      title: "AI Content Generator",
-      description: "An AI-powered tool for generating marketing copy, blog posts, and social media content.",
-      tags: ["Python", "TensorFlow", "Flask", "React"],
-      image: "/ai.jpg",
-      liveDemo: "https://social-media.example.com",
-      github: "https://github.com/yourusername/social-media-app"
+      title: "Cakes.com",
+      description: "A sleek, responsive site for a cakes shop making wedding, birthday and custom made cakes around Juja, Kiambu and Nairobi.",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      image: "/Cakes.avif",
+      liveDemo: "https://cakes-com.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/Cakes.com"
     },
     {
       id: 6,
-      title: "Finance Tracker",
-      description: "A personal finance application for budget management, expense tracking, and financial goal setting.",
-      tags: ["Vue.js", "Express", "PostgreSQL", "D3.js"],
-      image: "/finance.jpg",
-      liveDemo: "https://social-media.example.com",
-      github: "https://github.com/yourusername/social-media-app"
+      title: "Aticas Restaurant & Fast-food",
+      description: "Step into a world where homemade comfort meets fast-food convenience.",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      image: "/aticas.avif",
+      liveDemo: "https://aticas.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/aticas-juja-eatery-web"
     },
     {
       id: 7,
-      title: "Health & Fitness App",
-      description: "A comprehensive wellness platform for workout tracking, meal planning, and health monitoring.",
-      tags: ["React", "Node.js", "MongoDB", "Socket.io"],
-      image: "/health.jpg",
-      liveDemo: "https://social-media.example.com",
-      github: "https://github.com/yourusername/social-media-app"
+      title: "The Stoic Way",
+      description: "A minimalist, ad-free site with concise Stoic philosophy articles, daily meditations, and exercises for resilience and clarity.",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      image: "/Stoic.avif",
+      liveDemo: "https://thestoicway.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/The-Stoic-Way"
+    },
+    {
+      id: 8,
+      title: "Agapez Friends Group",
+      description: "Welcome to the Agapez Squad – Where Chaos Meets Charm!",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
+      image: "/Agapez.avif",
+      liveDemo: "https://agapez.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/mikehize-juja-delights"
     }
   ];
 

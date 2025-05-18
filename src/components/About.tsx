@@ -33,7 +33,7 @@ const About = () => {
   }, []);
 
   const personalInfo = [
-    { icon: Calendar, label: "Birthday", value: "June 7, 2003" },
+    { icon: Calendar, label: "Birthday", value: "June 7, 🤔😜😜😅" },
     { icon: Mail, label: "Email", value: "kelvinmwendadoreen@gmail.com" },
     { icon: Phone, label: "Phone", value: "+254 746917394" },
     { icon: MapPin, label: "Location", value: "Nairobi, Kenya" },
@@ -72,7 +72,7 @@ const About = () => {
                 ${imageHovered ? 'grayscale-0 scale-105' : 'grayscale'}">
                 {/* Replace with your profile image */}
                 <img 
-                  src="/Kelvin.jpg" 
+                  src="/Kelvin.avif" 
                   alt="Profile Image" 
                   className="w-full h-full object-cover"
                 />

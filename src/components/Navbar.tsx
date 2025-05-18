@@ -46,7 +46,7 @@ const Navbar = () => {
           className="text-lg font-medium tracking-tighter flex items-center gap-2"
         >
           <img 
-            src="./public/logo.jpg" 
+            src="./public/chocs.avif" 
             alt="Kelvin Mwenda" 
             className="h-10 w-10 rounded-full object-cover border-2 border-white shadow-lg"
             onError={(e) => {
