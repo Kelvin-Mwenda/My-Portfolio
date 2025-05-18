@@ -1,10 +1,16 @@
-
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const sections = [
+  { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
+
+const Navbar: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<string>("about");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -17,9 +23,23 @@ const Navbar = () => {
       } else {
         setIsScrolled(false);
       }
+
+      let current = "about";
+      for (const section of sections) {
+        const el = document.getElementById(section.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom > 80) {
+            current = section.id;
+            break;
+          }
+        }
+      }
+      setActiveSection(current);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -35,19 +55,19 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12",
-        isScrolled 
-          ? "bg-[#0d0d0d]/90 backdrop-blur-lg shadow-md" 
+        isScrolled
+          ? "bg-[#0d0d0d]/90 backdrop-blur-lg shadow-md"
           : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a 
-          href="#home" 
+        <a
+          href="#home"
           className="text-lg font-medium tracking-tighter flex items-center gap-2"
         >
-          <img 
-            src="./public/chocs.avif" 
-            alt="Kelvin Mwenda" 
+          <img
+            src="/chocs.avif"
+            alt="Kelvin Mwenda"
             className="h-10 w-10 rounded-full object-cover border-2 border-white shadow-lg"
             onError={(e) => {
               e.currentTarget.src = "https://shorturl.at/mYfLo";
@@ -79,8 +99,8 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu button */}
-        <button 
-          className="md:hidden text-white/90 hover:text-white transition-colors" 
+        <button
+          className="md:hidden text-white/90 hover:text-white transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
