@@ -55,7 +55,7 @@ const Projects = () => {
       description: "A sleek, responsive site for a cakes shop making wedding, birthday and custom made cakes all around Kenya.",
       tags: ["React", "TypeScript", "Tailwind CSS", 'React Router'],
       image: "/choco.avif",
-      liveDemo: "https://agapez.netlify.app/",
+      liveDemo: "https://chocoballs.netlify.app/",
       github: "hhttps://github.com/Kelvin-Mwenda/choco-balls"
     },
     {
