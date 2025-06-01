@@ -138,8 +138,8 @@ const Projects = () => {
                 />
               </div>
 
-              
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* Overlay: always visible on mobile, hover on md+ */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h3 className="text-xl md:text-2xl font-bold">{project.title}</h3>
                   <p className="mt-2 text-sm text-gray-200 line-clamp-2">{project.description}</p>
@@ -178,8 +178,8 @@ const Projects = () => {
                 </div>
               </div>
               
-              {/* Non-hover state info */}
-              <div className="p-6 bg-white/90 dark:bg-black/90 backdrop-blur-sm group-hover:translate-y-full transition-transform duration-300">
+              {/* Non-hover state info: hidden on mobile, visible on md+ */}
+              <div className="hidden md:block p-6 bg-white/90 dark:bg-black/90 backdrop-blur-sm group-hover:translate-y-full transition-transform duration-300">
                 <h3 className="text-lg font-semibold">{project.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground line-clamp-1">{project.description}</p>
               </div>
