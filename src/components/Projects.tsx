@@ -102,6 +102,33 @@ const Projects = () => {
       image: "/Agapez.avif",
       liveDemo: "https://agapez.netlify.app/",
       github: "https://github.com/Kelvin-Mwenda/mikehize-juja-delights"
+    },
+    {
+      id: 9,
+      title: "Khalice's Portfolio",
+      description: "It’s a sleek, minimalist portfolio site that blends tech, design, and storytelling into a smooth, visually engaging experience.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      image: "/Khalice.avif",
+      liveDemo: "https://khalice.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/khalice-portfolio.git"
+    },
+    {
+      id: 10,
+      title: "Beryl Tech Solutions",
+      description: "Beryl Tech Solutions is a tech-focused company offering software development, IT consulting, and digital transformation services.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      image: "/beryltech.avif",
+      liveDemo: "https://berylsolutions.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/beryl-tech-solutions.git"
+    },
+    {
+      id: 11,
+      title: "Chuka County Referral Hospital",
+      description: "A clean, professional website for Chuka County Referral Hospital that provides essential information about the hospital’s services, mission, and contact details in a clear and accessible format.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "OpenStreetMap"],
+      image: "/chuka.avif",
+      liveDemo: "https://chukareferralhospital.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/chuka-referral-hospital.git"
     }
   ];
 
