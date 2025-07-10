@@ -7,6 +7,9 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { init } from "@emailjs/browser";
+
+init("q2mp6RoJzyhngPMAL");
 
 const Index = () => {
   useEffect(() => {
