@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
           className="text-lg font-medium tracking-tighter flex items-center gap-2"
         >
           <img
-            src="/chocs.avif"
+            src="/chocs-k.avif"
             alt="Kelvin Mwenda"
             className="h-10 w-10 rounded-full object-cover border border-black/20 dark:border-white/20 shadow-none"
             onError={(e) => {
