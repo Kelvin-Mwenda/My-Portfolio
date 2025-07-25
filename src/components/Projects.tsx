@@ -129,6 +129,15 @@ const Projects = () => {
       image: "/chuka.avif",
       liveDemo: "https://chukareferralhospital.netlify.app/",
       github: "https://github.com/Kelvin-Mwenda/chuka-referral-hospital.git"
+    },
+    {
+      id: 12,
+      title: "Joy Mbuthia",
+      description: "A clean, professional personal website for Joy that provides essential information about the her services, projects, and contact details in a clear and accessible format.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Bento UI"],
+      image: "/Joy.avif",
+      liveDemo: "https://joymbuthia.netlify.app/",
+      github: "https://github.com/Kelvin-Mwenda/joy-mbuthia-glow.git"
     }
   ];
 
@@ -136,7 +145,7 @@ const Projects = () => {
     <section 
       id="projects" 
       ref={containerRef}
-      className="py-24 md:py-32 bg-secondary/50"
+      className="py-24 md:py-32"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
@@ -146,7 +155,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Featured Projects
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-4 text-foreground max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and expertise. Each project was carefully crafted with attention to detail and user experience.
           </p>
         </div>
@@ -208,7 +217,7 @@ const Projects = () => {
               {/* Non-hover state info: hidden on mobile, visible on md+ */}
               <div className="hidden md:block p-6 bg-white/90 dark:bg-black/90 backdrop-blur-sm group-hover:translate-y-full transition-transform duration-300">
                 <h3 className="text-lg font-semibold">{project.title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground line-clamp-1">{project.description}</p>
+                <p className="mt-1 text-sm text-foreground line-clamp-1">{project.description}</p>
               </div>
             </div>
           ))}

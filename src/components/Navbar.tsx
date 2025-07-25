@@ -41,13 +41,12 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12",
-        isScrolled
-          ? "bg-[#0d0d0d]/90 backdrop-blur-lg shadow-md"
-          : "bg-transparent"
-      )}
+    <nav className={cn(
+    "fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 transition-all duration-300",
+    isScrolled
+      ? "bg-white/6 backdrop-blur-lg shadow-md dark:bg-[#0d0d0d]/80"
+      : "bg-transparent"
+  )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
@@ -58,13 +57,18 @@ const Navbar: React.FC = () => {
           <img
             src="/chocs.avif"
             alt="Kelvin Mwenda"
-            className="h-10 w-10 rounded-full object-cover border-2 border-white shadow-lg"
+            className="h-10 w-10 rounded-full object-cover border border-black/20 dark:border-white/20 shadow-none"
             onError={(e) => {
-              e.currentTarget.src = "https://shorturl.at/mYfLo";
+              e.currentTarget.src = "https://i.pinimg.com/1200x/46/ee/59/46ee59843033104d46c30b8764e7888e.jpg";
               console.log("Logo image failed to load, using placeholder");
             }}
           />
-          <span className="font-bold text-white">Kelvin Mwenda</span>
+          <span className={cn(
+              "font-bold",
+              isScrolled
+                ? "dark:text-foreground"
+                : "bg-transparent"
+            )}>Kelvin Mwenda</span>
         </a>
 
         {/* Desktop navigation */}
@@ -75,14 +79,14 @@ const Navbar: React.FC = () => {
               href={link.href}
               className={cn(
                 "text-sm font-medium tracking-wide transition-all duration-300 px-3 py-2 rounded-md relative",
-                activeSection === link.id
-                  ? "text-[#8B4513] shadow-[0_0_10px_rgba(139,69,19,0.3)]"
-                  : "text-white/80 hover:text-white hover:bg-white/5"
+              activeSection === link.id
+                ? "text-[#ac581dda]"
+                : "text-black hover:text-neutral-700 dark:text-[#ffffffe8] dark:hover:text-[#aaa7a4]"
               )}
             >
               {link.name}
               {activeSection === link.id && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#8B4513] rounded-full shadow-[0_0_5px_#8B4513]"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#ac581dda] rounded-full"></span>
               )}
             </a>
           ))}

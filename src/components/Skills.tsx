@@ -74,7 +74,7 @@ const Skills = () => {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Skills & Languages
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-4 text-foreground max-w-2xl mx-auto">
             With a diverse set of technical skills and programming languages, I can tackle a wide range of projects and challenges.
           </p>
         </div>

@@ -143,7 +143,7 @@ const Contact = () => {
               Get in Touch
             </div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Let's work together</h2>
-            <p className="mt-4 text-muted-foreground max-w-md">
+            <p className="mt-4 text-foreground max-w-md">
               I'm interested in freelance opportunities – especially ambitious or large projects. However, if you have other requests or questions, don't hesitate to contact me.
             </p>
 
@@ -155,7 +155,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">{item.title}</h3>
-                    <a href={item.link} className="text-muted-foreground hover:text-[#8B4513] transition-colors">
+                    <a href={item.link} className="text-foreground hover:text-[#8B4513] transition-colors">
                       {item.value}
                     </a>
                   </div>
@@ -214,7 +214,7 @@ const Contact = () => {
                   <CheckCircle className="h-8 w-8" />
                 </div>
                 <h3 className="text-2xl font-bold">Thank You!</h3>
-                <p className="text-muted-foreground max-w-md">
+                <p className="text-foreground max-w-md">
                   Your message has been sent successfully. I'll get back to you as soon as possible.
                 </p>
               </div>

@@ -131,11 +131,11 @@ const Hero = () => {
             >
               <h1 ref={textRef} className="glitch-text text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-poppins">
                 <span className="block mb-2">Hi, I am</span>
-                <span className="block text-[#8B4513] glowing-text">Kelvin Mwenda</span>
+                <span className="block text-[#8B4513]" style={{fontFamily:'Caveat, Indie Flower'}}>Kelvin Mwenda</span>
               </h1>
             </div>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mt-4 font-poppins animate-fade-in" style={{ animationDelay: "0.5s" }}>
+            <p className="text-xl md:text-2xl text-foreground mt-4 font-poppins animate-fade-in" style={{ animationDelay: "0.5s" }}>
               Building digital experiences, one line of code at a time
             </p>
             
