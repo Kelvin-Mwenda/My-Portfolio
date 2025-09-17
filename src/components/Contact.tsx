@@ -94,7 +94,7 @@ const Contact = () => {
             email: formData.email,
             message: formData.message,
           },
-          "q2mp6RoJzyhngPMAL" // Replace with your EmailJS Public Key
+          "9lpl3Z7Ob68ZlFykN" // Replace with your EmailJS Public Key
         );
 
         setIsSubmitted(true);
